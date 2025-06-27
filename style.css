@@ -1,0 +1,193 @@
+/* General Styling */
+:root {
+    --primary-color: #007bff; /* Biru */
+    --secondary-color: #0056b3; /* Biru lebih gelap */
+    --text-color: #333;
+    --background-light: #f8f9fa;
+    --border-color: #dee2e6;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Header/Hero Section dengan Logo */
+.logo-hero {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-image: url('Gambar/Pasted image (4).png'); /* Pastikan path ini benar */
+    background-size: cover; /* Membuat gambar menutupi seluruh area */
+    background-repeat: no-repeat; /* Agar gambar tidak berulang */
+    background-position: center center; /* Memposisikan gambar di tengah */
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container img {
+    max-width: 200px; /* Sesuaikan ukuran logo sesuai keinginan Anda */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.logo-container .tagline {
+    font-size: 1.1em;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.image-frame {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-frame:hover {
+    transform: translateY(-5px);
+}
+
+.image-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Product Description */
+.product-description {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.product-description h2,
+.product-description h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.product-description ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.product-description ul li {
+    margin-bottom: 10px;
+}
+
+.call-to-action-text {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px;
+    color: var(--secondary-color);
+}
+
+/* WhatsApp Button Section */
+.whatsapp-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #28a745; /* Tetap hijau WhatsApp */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button:hover {
+    background-color: #218838; /* Hijau WhatsApp lebih gelap */
+    transform: translateY(-3px);
+}
+
+.whatsapp-button i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+
+.small-text {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--text-color);
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .image-frame {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-hero {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .logo-container img {
+        max-width: 150px;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .product-description {
+        padding: 20px;
+    }
+    .whatsapp-button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+    .whatsapp-button i {
+        font-size: 1em;
+    }
+}
